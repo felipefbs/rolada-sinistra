@@ -24,8 +24,9 @@ func New(n int) *Rolada {
 	}
 
 	return &Rolada{
-		Number:   r,
-		sumMutex: &sync.Mutex{},
+		Number:    r,
+		sumMutex:  &sync.Mutex{},
+		strMuxtex: &sync.Mutex{},
 	}
 }
 
