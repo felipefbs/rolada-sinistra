@@ -1,6 +1,7 @@
 package rolada
 
 import (
+	"slices"
 	"strconv"
 	"strings"
 	"sync"
@@ -70,11 +71,7 @@ func (r *Rolada) Int() int {
 }
 
 func (r *Rolada) IsZero() bool {
-	if r.Sum() == 0 {
-		return true
-	}
-
-	return false
+	return slices.Equal(r.Number[:], make([]int, 6))
 }
 
 func (r *Rolada) HarshadCheck() bool {
