@@ -61,10 +61,10 @@ func (r *Rolada) String() string {
 }
 
 func (r *Rolada) Int() int {
-	if r.IsZero() {
-		return 0
+	i := 0
+	for _, n := range r.Number {
+		i = i*10 + n
 	}
-	i, _ := strconv.Atoi(r.String())
 
 	return i
 }
